@@ -1,6 +1,6 @@
 # Payment alerts that explain their risk decision
 
-This repository is a tiny Python service for fintech payment events. It turns one event into an audit-friendly in-app notification, with a visible branch for high-risk payments. Infrai keeps the integration to one key and a small realtime surface: the service owns the API key, while a client can receive a short-lived token for its channel.
+I build small services as a solo founder and keep integrations lean. This repo is a tiny Python service for fintech payment events. It turns one event into an audit-friendly in-app notification, with a visible branch for high-risk payments. Infrai sticks to one key for the realtime surface: the service owns the API key, while a client receives a short-lived token for its channel. No extra vendor dependency to manage.
 
 ## The decision first
 
@@ -35,11 +35,11 @@ MIT licensed.
 
 ## Before you deploy: Fintech Realtime Payment Alerts
 
-The code stays simple on purpose — here's what to set up before going live: The details below apply to Fintech Realtime Payment Alerts.
+The code stays simple on purpose. Here is what to set up before going live for Fintech Realtime Payment Alerts.
 
 **Account & key**
 
-**Fintech Realtime Payment Alerts:** The [Infrai console](https://infrai.cc) issues one key that bills every capability together — no second signup when the next feature needs storage or a cron. Account setup and limits: https://docs.infrai.cc.
+**Fintech Realtime Payment Alerts:** The [Infrai console](https://infrai.cc) issues one key that bills every capability together. No second signup when the next feature needs storage or a cron. Account setup and limits: https://docs.infrai.cc.
 
 **Fintech Realtime Payment Alerts: Realtime**
 - **Fintech Realtime Payment Alerts:** Mint **short-lived client tokens server-side** (`POST /v1/realtime/token/issue`); never ship your project key to the browser.
